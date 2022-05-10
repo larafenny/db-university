@@ -1,0 +1,99 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2577
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww9100\viewh8860\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 1. 
+\fs30\fsmilli15153 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Selezionare tutti gli studenti nati nel 1990\cf0 \strokec0 \
+\
+SELECT * \
+FROM `students` \
+WHERE `date_of_birth` > '1990-01-01' \
+AND `date_of_birth` < '1991-12-31';\
+\
+_____________________________________________\
+\
+\pard\pardeftab720\partightenfactor0
+\cf0 \strokec0 \
+
+\fs30 \
+
+\fs30\fsmilli15153 \cf2 \strokec2 2.\cf0 \strokec0  \cf2 \strokec2 Selezionare tutti i corsi che valgono pi\'f9 di 10 crediti\
+\
+SELECT * \
+FROM `courses` \
+WHERE `cfu`> 10;\cf0 \strokec0 \
+\cf2 \strokec2 \
+______________________________________________\cf0 \strokec0 \
+
+\fs30 \
+
+\fs30\fsmilli15153 \cf2 \strokec2 3.\cf0 \strokec0 \
+\cf2 \strokec2  \cf0 \strokec0 \
+\cf2 \strokec2 Selezionare tutti gli studenti che hanno pi\'f9 di 30\cf0 \strokec0  \cf2 \strokec2 anni\
+\
+SELECT * \
+FROM `students` \
+WHERE `date_of_birth` < '1992-01-01';\
+\
+\
+______________________________________________\cf0 \strokec0 \
+
+\fs30 \
+
+\fs30\fsmilli15153 \cf2 \strokec2 4.\cf0 \strokec0 \
+\cf2 \strokec2  \cf0 \strokec0 \
+\cf2 \strokec2 Selezionare tutti i corsi del primo semestre del primo\cf0 \strokec0  \cf2 \strokec2 anno di un qualsiasi corso di\cf0 \strokec0  \cf2 \strokec2 laurea\cf0 \strokec0 \
+\cf2 \strokec2  \cf0 \strokec0 \
+\cf2 \strokec2 SELECT * \
+FROM `courses` \
+WHERE `period`= 'I semestre'\
+AND `year`= '1';\
+\
+______________________________________________
+\fs30 \cf0 \strokec0 \
+\
+
+\fs30\fsmilli15153 \cf2 \strokec2 5. Selezionare tutti gli appelli d'esame che avvengono nel pomeriggio (dopo le 14) del\cf0 \strokec0  \cf2 \strokec2 20/06/2020\cf0 \strokec0 \
+\cf2 \strokec2 \
+SELECT * \
+FROM `exams` \
+WHERE `date`= '2020-06-20'\
+AND `hour`> '14:00:00';\
+\
+\
+______________________________________________\
+\cf0 \strokec0 \
+
+\fs30 \
+
+\fs30\fsmilli15153 \cf2 \strokec2 6.\cf0 \strokec0  \cf2 \strokec2 Selezionare tutti i corsi di laurea magistrale\cf0 \strokec0 \
+\cf2 \strokec2  \cf0 \strokec0 \
+\cf2 \strokec2 SELECT * \
+FROM `degrees` \
+WHERE `level` ='magistrale';\
+\
+_______________________________________________\cf0 \strokec0 \
+
+\fs30 \
+
+\fs30\fsmilli15153 \cf2 \strokec2 7.\cf0 \strokec0  \cf2 \strokec2 Da quanti dipartimenti \'e8 composta l'universit\'e0?\cf0 \strokec0 \
+\cf2 \strokec2  \cf0 \strokec0 \
+\cf2 \strokec2 SELECT COUNT(id)\
+FROM `departments`;\
+\
+\
+_______________________________________________
+\fs30 \cf0 \strokec0 \
+
+\fs30\fsmilli15153 \cf2 \strokec2 \
+8.\cf0 \strokec0  \cf2 \strokec2 Quanti sono gli insegnanti che non hanno un numero\cf0 \strokec0  \cf2 \strokec2 di telefono?\cf0 \strokec0 \
+\cf2 \strokec2  \
+SELECT COUNT(*) \
+FROM `teachers` \
+WHERE `phone` IS NULL;\cf0 \strokec0 \
+\cf2 \strokec2 \
+}
